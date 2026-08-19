@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Setup Default User
+        // Setup Default User.
         User::factory()->create();
 
-        // Setup Default Project
+        // Setup Default Project.
         Project::factory()->create(['name' => 'Default']);
     }
 }
