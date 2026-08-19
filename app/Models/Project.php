@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Database\Factories\ProjectFactory;
 
+/**
+ * @mixin IdeHelperProject
+ */
 #[Fillable(['uuid', 'name'])]
 class Project extends Model
 {

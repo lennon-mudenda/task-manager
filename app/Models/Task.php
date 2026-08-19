@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Database\Factories\TaskFactory;
 
+/**
+ * @mixin IdeHelperTask
+ */
 #[Fillable(['uuid', 'user_id', 'project_id', 'name', 'priority'])]
 class Task extends Model
 {

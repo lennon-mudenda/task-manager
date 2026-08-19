@@ -31,3 +31,7 @@ zsh:
 
 tinker:
 	docker exec -it $(APP_CONTAINER) php artisan tinker
+
+# Dev Targets
+ide-helper:
+	docker exec -it $(APP_CONTAINER) php artisan ide-helper:models -n -M
