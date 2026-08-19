@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Task;
+use App\Models\User;
+use App\Models\Project;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -29,13 +31,10 @@ class TaskFactory extends Factory
     /**
      * Get a project ID.
      *
-     * @return ?int
+     * @return int
      */
-    public function getProjectId(): ?int
+    public function getProjectId(): int
     {
-        if (!$this->faker->boolean()) { // Decide at random if tasks has a user or not
-            return null;
-        }
         if (Project::query()->count()) {
             return Project::first()->id;
         } else {

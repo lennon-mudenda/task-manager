@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('project_id')->nullable()->constrained('projects')->onDelete('cascade')->onUpdate('cascade');
             $table->string('name');
-            $table->unsignedInteger('priority')->default(0);
+            $table->unsignedBigInteger('priority')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
